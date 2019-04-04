@@ -35,7 +35,7 @@ export class PostsService {
   }
 
   addPost(post: Ipost) {
-    this.postsCollection.add(post);
+    this.postsCollection.add(post).then(res => console.log(res));
   }
 
   deletePost(post: Ipost) {
