@@ -1,0 +1,22 @@
+<form >
+  <input placeholder="title"
+         [(ngModel)]="title"
+         type="text"
+         name = title
+         class="input-field col s12">
+  <input placeholder="content"
+         [(ngModel)]="content"
+         type="text"
+         name="content"
+         class="input-field col s12">
+  <button (click)="addPost()"></button>
+</form>
+
+
+<ul class="collection">
+  <li *ngFor="let post of posts">
+    <span class="col s11"> {{ post.title }} </span>
+    <span class="col s11"> {{ post.content }} </span>
+    <a class="col s1" (click)="removePost(post)">x</a>
+  </li>
+</ul>
